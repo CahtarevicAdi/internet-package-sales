@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableCell?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:controller="com.example.InternetPackageController"
+          xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/8.0.171"
+          alignment="CENTER" hgap="10" vgap="10"
+          styleClass="grid-pane">
+    <Label text="Speed:" styleClass="label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="speedComboBox" styleClass="combo-box" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="Data:" styleClass="label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="dataComboBox" styleClass="combo-box" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Contract:" styleClass="label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="contractComboBox" styleClass="combo-box" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label text="Name:" styleClass="label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="nameField" styleClass="text-field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label text="Address:" styleClass="label" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="addressField" styleClass="text-field" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Button text="Save" onAction="#handleSaveButtonAction" styleClass="button" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <TableView fx:id="personTableView" GridPane.rowIndex="6" GridPane.columnSpan="2">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name" />
+            <TableColumn fx:id="addressColumn" text="Adress" />
+            <TableColumn fx:id="speedColumn" text="Speed" />
+            <TableColumn fx:id="dataColumn" text="Data" />
+            <TableColumn fx:id="contractColumn" text="Contract duration" />
+            <TableColumn fx:id="deleteColumn" text="Remove"/>
+        </columns>
+    </TableView>
+</GridPane>
